@@ -14,11 +14,13 @@ module.exports = {
 
     read: (req, res) => {
         res.status(200).send( messages );
+
     },
 
 
     update: (req, res) => {
        // const { text } = req.body;
+       // practice this some more
       
         const messageIndex = messages.findIndex( message => message.id == req.params.id);
         let message = messages[ messageIndex ];
