@@ -36,7 +36,7 @@ module.exports = {
 
 
     delete: (req, res) => {
-        messageIndex = messages.findIndex( message => message.id = req.params.id );
+        messageIndex = messages.findIndex( message => message.id === +req.params.id );
         messages.splice(messageIndex, 1);
         res.status(200).send( messages )
     }
